@@ -3,7 +3,7 @@ After working with tensorflow directly in wsl2 and thinking about [pets versus c
 
 The [Tensorflow Docker](https://www.tensorflow.org/install/docker) documentation is a good start, useful for making sure things work.  Some documenation for a composable came from [Valohai](https://docs.valohai.com/howto/docker/docker-build-image/), which lead to the first Dockerfiles.  There is also some [interesting ideas](https://towardsdatascience.com/how-to-deploy-machine-learning-models-with-tensorflow-part-2-containerize-it-db0ad7ca35a7) for how to deploy model in docker to support inference.
 
-Of note, at the moment this is being done with vscode in Win10 with Remote-WSL, Docker, Pylance and Python extensions.  And tabnine.  The idea is to make it easy to develop in the container.
+Of note, at the moment this is being done with vscode in Win10 with Remote-WSL, Docker, Pylance and Python extensions.  And tabnine.  Assuming implementation in python.  The idea is to make it easy to develop in the container.
 
 ## How to Make This Go
 Instructions for making this work
@@ -21,7 +21,7 @@ export 'DOCKER_USER="$(id -u):$(id -g)"'
 Add any needed python modules to `requirements.txt`.  Update as needed.
 
 ### do this to build and run
-To build and run
+To build and run (do this in the vscode terminal)
 ```
 $ docker compose build tf
 $ docker compose run tf
