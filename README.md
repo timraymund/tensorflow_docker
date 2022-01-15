@@ -1,14 +1,14 @@
 # Dockerfile Tensorflow
 After working with tensorflow directly in wsl2 and thinking about [pets versus cattle](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/) this seemed like something worthwhile.  After all, one might like to share with others and this makes it a great deal easier.  One might also expect to deliver tensorflow in a docker image. 
 
-The [Tensorflow Docker](https://www.tensorflow.org/install/docker) documentation is a good start, useful for making sure things work.  Some documenation for a composable came from [Valohai](https://docs.valohai.com/howto/docker/docker-build-image/), which lead to the first Dockerfiles.  There is also some [interesting ideas](https://towardsdatascience.com/how-to-deploy-machine-learning-models-with-tensorflow-part-2-containerize-it-db0ad7ca35a7) for how to deploy model in docker to support inference.
+The [Tensorflow Docker](https://www.tensorflow.org/install/docker) documentation is a good start, useful for making sure things work.  Some documenation for a composable came from [Valohai](https://docs.valohai.com/howto/docker/docker-build-image/), which led to the first Dockerfiles.  There is also some [interesting ideas](https://towardsdatascience.com/how-to-deploy-machine-learning-models-with-tensorflow-part-2-containerize-it-db0ad7ca35a7) for how to deploy model in docker to support inference.
 
 Of note, at the moment this is being done with vscode in Win10 with Remote-WSL, Docker, Pylance and Python extensions.  And tabnine.  Assuming implementation in python.  The idea is to make it easy to develop in the container.
 
 ## How to Make This Go
 Instructions for making this work
 
-### do this once
+### do these things once
 Add this to ~/.bashrc
 ```
 export DOCKER_USER="$(id -u):$(id -g)"
@@ -19,6 +19,11 @@ export 'DOCKER_USER="$(id -u):$(id -g)"'
 ```
 
 Add any needed python modules to `requirements.txt`.  Update as needed.
+
+Not completely sure, but one may want to run this:
+```
+$ docker pull tensorflow/tensorflow
+```
 
 ### do this to build and run
 To build and run (do this in the vscode terminal)
