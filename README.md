@@ -13,7 +13,7 @@ Add this to ~/.bashrc
 ```
 export DOCKER_USER="$(id -u):$(id -g)"
 ```
-This won't take effect until the bashrc is run again, which requires sourcing the bashrc or logging out and logging back into wsl2.  To avoid having to that, run this on the command line:
+This won't take effect until the bashrc is run again, which requires sourcing the bashrc or logging out and logging back into wsl2 distribution.  To avoid having to that, run this on the command line:
 ```
 export 'DOCKER_USER="$(id -u):$(id -g)"'
 ```
