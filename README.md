@@ -24,6 +24,10 @@ Not completely sure, but one may want to run this:
 ```
 $ docker pull tensorflow/tensorflow
 ```
+and this seems common advice, but doesn't seem to be necessary
+```
+$ sudo usermod -aG docker $USER
+```
 
 ### do this to build and run
 To build and run (do this in the vscode terminal)
@@ -32,6 +36,8 @@ $ docker compose build tf
 $ docker compose run tf
 ```
 This puts one into a shell inside the docker environment.  Note that if one is not using v2 compose, e.g. with the linux docker engine, this will work with `docker-compose` as well.
+
+An alternative is to use the Docker extension in vscode to start and attach to the container.  
 
 ### in the container 
 Once the container is running, `/working` provides access to the local directory.
