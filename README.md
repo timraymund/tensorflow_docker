@@ -1,10 +1,12 @@
 # Dockerfile Tensorflow
-After working with tensorflow directly in wsl2 and thinking about [pets versus cattle](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/) this seemed like something worthwhile.  After all, one might like to share with others and this makes it a great deal easier.  One might also expect to deliver tensorflow in a docker image. 
+Wanting to explore ML/AI implementations in python with tensorflow while avoiding most of the installation and maintenance?  OK with Docker?  This is it.
+
+After installing tensorflow directly in wsl2 and thinking about [pets versus cattle](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/) this seemed like a better alternative, a means to have a consistent, performant environment without spending time with install, update or versioning.  It also seemed like an easier way to share with others.  Potentially, it may make it easier to deliver tensorflow-based products. 
 
 ## Background Material
 The [Tensorflow Docker](https://www.tensorflow.org/install/docker) documentation was a good start, useful for making sure things worked.  The documenation for a composable from [Valohai](https://docs.valohai.com/howto/docker/docker-build-image/) helped while drafting the first Dockerfile for this.  There are some [interesting ideas](https://towardsdatascience.com/how-to-deploy-machine-learning-models-with-tensorflow-part-2-containerize-it-db0ad7ca35a7) for how to deploy model in docker to support inference which might be useful later.
 
-Of note, at the moment this is being done with vscode in Win10 with Remote-WSL, Docker, Pylance and Python extensions.  And tabnine.  Assuming implementation in python.  The idea is to make it easy to develop in the container.
+Of note, at the moment this is being done with vscode in win10 with Remote-WSL, Docker, Pylance and Python extensions.  And Tabnine.  This assumes implementation in python.  
 
 ## How to Make This Go
 Instructions for making this work
